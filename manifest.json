@@ -1,0 +1,8 @@
+{
+  "name": "F1 Telemetry Dashboard",
+  "short_name": "F1Telemetry",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111",
+  "theme_color": "#8C0D0D"
+}

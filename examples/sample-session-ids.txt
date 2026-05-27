@@ -1,0 +1,5 @@
+# Example session ids (these are illustrative; use /sessions endpoint to list real session ids)
+2025-monaco-fp1
+2025-monaco-qualy
+2025-monaco-race
+2026-italy-race

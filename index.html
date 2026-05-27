@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>F1 Telemetry Dashboard</title>
+  <link rel="icon" href="assets/logos/favicon.png" />
+  <link rel="stylesheet" href="src/styles/main.css" />
+  <link rel="stylesheet" href="assets/css/fonts.css" />
+  <meta name="theme-color" content="#8C0D0D" />
+</head>
+<body>
+  <div id="app" class="app-root">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">F1</div>
+        <div class="title">Telemetry Dashboard</div>
+      </div>
+      <div class="controls">
+        <select id="modeSelect" aria-label="Mode">
+          <option value="live">Live</option>
+          <option value="historical">Historical</option>
+        </select>
+        <input id="sessionSelect" placeholder="Enter session id (e.g., 2026-italy-race)" />
+        <button id="connectBtn">Connect</button>
+        <label style="margin-left:8px;color:var(--muted);font-size:13px">
+          <input id="wsToggle" type="checkbox" /> WebSocket
+        </label>
+      </div>
+    </header>
+
+    <main class="main-grid">
+      <section id="timingTower" class="panel timing-tower" aria-live="polite"></section>
+      <section id="trackMap" class="panel track-map"></section>
+      <aside id="driverPanel" class="panel driver-panel"></aside>
+      <section id="replayControls" class="panel replay-controls"></section>
+    </main>
+
+    <footer class="footer">
+      <div>Data source: OpenF1 · Static deployment</div>
+      <div id="statusBar">Ready</div>
+    </footer>
+  </div>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
